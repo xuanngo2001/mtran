@@ -10,4 +10,4 @@
 * `quickhash`
 
 # Design
-* Reuse existing tools. Candidates:  `cp`, `rsync`, `tar`, `pax`, `pv`, `crccp`
+* Reuse existing tools. Candidates? :  `cp`, `rsync`, `tar`, `pax`, `pv`, `crccp`, `mcp`, `hashdeep`
