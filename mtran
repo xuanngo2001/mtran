@@ -20,19 +20,23 @@ function F_MASS_TRANSFER()
   echo "${DEST_DIR}"
   
   
-  
 	case "${ACTION}" in
 	  
-	  # Copy
-	  copy)
+	  # tar: 0m49.923s, 0m46.756s
+	  copy|tar)
 	    (cd "${SRC_DIR}"; tar cf - .) | (cd "${DEST_DIR}"; tar xpf -)
 	    ;;
 
-    # rsync
+    # rsync: 0m57.197s, 0m53.659s
     rsync)
       rsync -a -W "${SRC_DIR}" "${DEST_DIR}"
       ;;
 	    
+    # cp: 0m48.305s
+    cp)
+      cp -a "${SRC_DIR}" "${DEST_DIR}"
+      ;;
+      	    
 	  *)
 	    echo "ERROR: Unknown action=>${ACTION}"
 	    exit 1
