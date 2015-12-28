@@ -8,3 +8,6 @@
 # Tools looked
 * `rsync --checksum` only uses hashes to see if a file needs to be updated. It doesn't perform a hash comparison afterward. It is not resilient to interruptions.
 * `quickhash`
+
+# Design
+* Reuse existing tools. Candidates:  `cp`, `rsync`, `tar`, `pax`, `pv`, `crccp`
