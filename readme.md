@@ -12,6 +12,7 @@
 
 # Test cases
 * Copy within the same devices: internal hard drive, usb key, external hard drive trough usb.
+* Copy from one device to another device of equal speed: internal hard drive to internal hard drive.
 * Copy from fast device to slow device: internal hard drive to external usb hard drive.
 * Copy from slow device to faster device: external usb hard drive to internal hard drive.
  
