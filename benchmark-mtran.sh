@@ -2,6 +2,7 @@
 set -e
 # Description: Time different command of mtran.
 #   -Should I reboot for every run?
+# Real, User and Sys process time statistics: http://stackoverflow.com/a/556411
 
 SRC_DIR=$1
 DEST_DIR=$2
