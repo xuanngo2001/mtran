@@ -57,3 +57,8 @@ http://unix.stackexchange.com/a/66660
   BTS?), where it is then ready to be unpacked by the "tar x".  Hmmm. 
   "cpio" doesn't know how to find, it just knows how to archive or copy
   through...
+  
+  
+# To read
+
+* http://blog.mudy.info/2010/07/linux-file-copy-benchmark-cp-vs-cpio-vs-tar-vs-rsync/
