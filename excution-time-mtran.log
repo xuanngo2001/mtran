@@ -1,0 +1,8 @@
+2015-12-29_13.29.22 cp  real	0m5.629s user	0m0.008s sys	0m0.964s 
+2015-12-29_13.29.22 tar  real	0m3.842s user	0m0.016s sys	0m1.040s 
+2015-12-29_13.29.22 tarbuffer  real	0m4.776s user	0m0.052s sys	0m1.312s 
+2015-12-29_13.29.22 rsync  real	0m5.818s user	0m0.860s sys	0m1.236s 
+2015-12-29_13.31.49 cp  real	0m3.397s user	0m0.000s sys	0m0.756s 
+2015-12-29_13.31.49 tar  real	0m3.648s user	0m0.072s sys	0m0.944s 
+2015-12-29_13.31.49 tarbuffer  real	0m4.218s user	0m0.080s sys	0m1.152s 
+2015-12-29_13.31.49 rsync  real	0m5.937s user	0m0.912s sys	0m1.440s 
