@@ -11,7 +11,7 @@ TEST_CASE_DESC=$3
 # Error handling.
 if [ ! -d "${SRC_DIR}" ]; then echo "Error: Source directory: ${SRC_DIR}: no such directory. Aborted!"; exit 1; fi;
 if [ ! -d "${DEST_DIR}" ]; then echo "Error: Destination directory: ${DEST_DIR}: no such directory. Aborted!"; exit 1; fi;
-if [ -z "${TEST_CASE_DESC}" ]; then echo "Error: Please provide test case description. e.g.: Hard drive to external USB hard drive. Aborted!"; exit 1; fi;
+if [ -z "${TEST_CASE_DESC}" ]; then echo "Error: Please provide test case description. e.g.: Internal hard drive to external usb hard drive. Aborted!"; exit 1; fi;
 
 SRC_DIR=$(readlink -ev "${SRC_DIR}")
 DEST_DIR=$(readlink -ev "${DEST_DIR}")
