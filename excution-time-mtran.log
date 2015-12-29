@@ -1,8 +1,16 @@
-2015-12-29_13.29.22 cp  real	0m5.629s user	0m0.008s sys	0m0.964s 
-2015-12-29_13.29.22 tar  real	0m3.842s user	0m0.016s sys	0m1.040s 
-2015-12-29_13.29.22 tarbuffer  real	0m4.776s user	0m0.052s sys	0m1.312s 
-2015-12-29_13.29.22 rsync  real	0m5.818s user	0m0.860s sys	0m1.236s 
-2015-12-29_13.31.49 cp  real	0m3.397s user	0m0.000s sys	0m0.756s 
-2015-12-29_13.31.49 tar  real	0m3.648s user	0m0.072s sys	0m0.944s 
-2015-12-29_13.31.49 tarbuffer  real	0m4.218s user	0m0.080s sys	0m1.152s 
-2015-12-29_13.31.49 rsync  real	0m5.937s user	0m0.912s sys	0m1.440s 
+2015-12-29_13.54.47; Size=161M, files=419, directories=4; cp;  real	0m3.586s user	0m0.008s sys	0m0.752s 
+2015-12-29_13.54.47; Size=161M, files=419, directories=4; tar;  real	0m3.814s user	0m0.008s sys	0m1.032s 
+2015-12-29_13.54.47; Size=161M, files=419, directories=4; tarbuffer;  real	0m4.748s user	0m0.048s sys	0m1.248s 
+2015-12-29_13.54.47; Size=161M, files=419, directories=4; rsync;  real	0m5.391s user	0m0.724s sys	0m1.184s 
+2015-12-29_13.56.00; Size=161M, files=419, directories=4; cp;  real	0m3.222s user	0m0.000s sys	0m0.712s 
+2015-12-29_13.56.00; Size=161M, files=419, directories=4; tar;  real	0m3.640s user	0m0.048s sys	0m0.980s 
+2015-12-29_13.56.00; Size=161M, files=419, directories=4; tarbuffer;  real	0m4.195s user	0m0.040s sys	0m1.140s 
+2015-12-29_13.56.00; Size=161M, files=419, directories=4; rsync;  real	0m5.332s user	0m0.792s sys	0m1.084s 
+2015-12-29_13.56.42; Size=161M, files=419, directories=4; cp;  real	0m3.207s user	0m0.000s sys	0m0.716s 
+2015-12-29_13.56.42; Size=161M, files=419, directories=4; tar;  real	0m3.687s user	0m0.068s sys	0m0.948s 
+2015-12-29_13.56.42; Size=161M, files=419, directories=4; tarbuffer;  real	0m4.180s user	0m0.008s sys	0m1.188s 
+2015-12-29_13.56.42; Size=161M, files=419, directories=4; rsync;  real	0m5.295s user	0m0.744s sys	0m1.116s 
+2015-12-29_13.58.24; Size=208M, files=5241, directories=364; cp;  real	0m48.797s user	0m0.036s sys	0m7.592s 
+2015-12-29_13.58.24; Size=208M, files=5241, directories=364; tar;  real	0m42.871s user	0m0.024s sys	0m8.444s 
+2015-12-29_13.58.24; Size=208M, files=5241, directories=364; tarbuffer;  real	0m42.433s user	0m0.176s sys	0m8.580s 
+2015-12-29_13.58.24; Size=208M, files=5241, directories=364; rsync;  real	0m38.885s user	0m0.576s sys	0m11.324s 
