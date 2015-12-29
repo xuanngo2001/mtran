@@ -24,7 +24,7 @@ function F_MASS_TRANSFER()
 
     # cp: plain copy.
     cp)
-      cp -a "${SRC_DIR}" "${DEST_DIR}"
+      cp -au "${SRC_DIR}" "${DEST_DIR}"
       ;;
 	  
 	  # tar: use tar to copy.
