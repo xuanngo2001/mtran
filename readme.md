@@ -31,7 +31,7 @@ http://superuser.com/a/985080
   
 http://unix.stackexchange.com/a/66660
 
-    pv will buffer up to 500M of data so can better accommodate fluctuations in reading and writing speeds on the 
+   >pv will buffer up to 500M of data so can better accommodate fluctuations in reading and writing speeds on the 
     two file systems (though in reality, you'll probably have a disk slower that the other and the OS' write back
      mechanism will do that buffering as well so it will probably not make much difference).
   
