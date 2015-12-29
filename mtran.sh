@@ -38,8 +38,7 @@ function F_MASS_TRANSFER()
       (cd "${SRC_DIR}" && tar cf - .) | pv -q -B 500M | (cd "${DEST_DIR}" && tar xpSf -)
       ;;
       
-    # rsync: 0m57.197s, 0m53.659s
-    # Don't use sparse with rsync: http://stackoverflow.com/a/13266131
+    # rsync: Don't use sparse with rsync: http://stackoverflow.com/a/13266131
     rsync)
       rsync -a -W "${SRC_DIR}" "${DEST_DIR}"
       ;;
