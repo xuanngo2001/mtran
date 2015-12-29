@@ -14,3 +14,10 @@
 
 
 * `cpio` unfortunately has an 8GB upper limit for files. http://serverfault.com/a/425671
+
+# Reading
+## Why is tar|tar so much faster than cp?
+
+http://superuser.com/a/985080
+
+    cp does open-read-close-open-write-close in a loop over all files. So reading from one place and writing to another occur fully interleaved. Tar|tar does reading and writing in separate processes, and in addition tar uses multiple threads to read (and write) several files 'at once', effectively allowing the disk controller to fetch, buffer and store many blocks of data at once. All in all, tar allows each component to work efficiently, while cp breaks down the problem in disparate, inefficiently small chunks.
