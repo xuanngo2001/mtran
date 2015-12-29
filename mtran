@@ -23,7 +23,7 @@ function F_MASS_TRANSFER()
 	case "${ACTION}" in
 	  
 	  # tar: 0m49.923s, 0m46.756s
-	  copy|tar)
+	  tar|copy)
 	    (cd "${SRC_DIR}"; tar cf - .) | (cd "${DEST_DIR}"; tar xpf -)
 	    ;;
 
