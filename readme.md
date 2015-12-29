@@ -39,4 +39,21 @@ http://unix.stackexchange.com/a/66660
    >pv will buffer up to 500M of data so can better accommodate fluctuations in reading and writing speeds on the 
     two file systems (though in reality, you'll probably have a disk slower that the other and the OS' write back
      mechanism will do that buffering as well so it will probably not make much difference).
-  
+ 
+ ## File copy method that is twice as fast as "cp -a"
+ 
+ https://lists.debian.org/debian-user/2001/06/msg00288.html
+ 
+ >The situation between the "find | cpio" case and the "tar c | buffer
+  | tar x" case seems analagous to what we do in that if you just point
+  out the bugs, it takes longer for them to get fixed than if you
+  submit a patch.  Can you see what I mean by that?  In "find | cpio",
+  "find" is just walking the filesystem handing file names off to
+  "cpio" who must then stat and read each file itself, and then also
+  write it back out to the new location.  In the "tar c | buffer | tar
+  x" case though, the "tar c" is making its own list of files, then
+  packing them up and piping the whole bundle off to the buffer (our
+  BTS?), where it is then ready to be unpacked by the "tar x".  Hmmm.
+
+  "cpio" doesn't know how to find, it just knows how to archive or copy
+  through...
