@@ -16,7 +16,7 @@ if [ ! -d "${DEST_DIR}" ]; then
   exit 1;
 fi
 
-DEST_DIR=$(readlink -e "${DEST_DIR}")
+DEST_DIR=$(readlink -ev "${DEST_DIR}")
 
 cd "${DEST_DIR}"
 dd if=/dev/urandom bs=4M count=2 | split -b 1024 -d -a 5

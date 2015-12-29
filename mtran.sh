@@ -13,8 +13,8 @@ function F_MASS_TRANSFER()
   if [ ! -d "${SRC_DIR}" ]; then echo "Error: Source directory: ${SRC_DIR}: no such directory. Aborted!"; exit 1; fi;
   if [ ! -d "${DEST_DIR}" ]; then echo "Error: Destination directory: ${DEST_DIR}: no such directory. Aborted!"; exit 1; fi;
   
-  SRC_DIR=$(readlink -e "${SRC_DIR}")
-  DEST_DIR=$(readlink -e "${DEST_DIR}")
+  SRC_DIR=$(readlink -ev "${SRC_DIR}")
+  DEST_DIR=$(readlink -ev "${DEST_DIR}")
   
   echo "${SRC_DIR}"
   echo "${DEST_DIR}"
