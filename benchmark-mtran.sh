@@ -17,7 +17,7 @@ DEST_DIR=$(readlink -ev "${DEST_DIR}")
 # Stop if source and destination directory are the same.
 if [ "${SRC_DIR}" = "${DEST_DIR}" ]; then echo "Error: Source and destination directory are the same. Aborted!"; exit 1; fi;
 
-# Get source directory(test data directory) statistic.
+# Get test data directory statistic. Other stats: http://stackoverflow.com/a/12522322
 SRC_SIZE=$(du -chs "${SRC_DIR}" | tail -n 1 | cut -f 1)
 SRC_FILES=$(find "${SRC_DIR}" -type f | wc -l)
 SRC_DIRS=$(find "${SRC_DIR}" -type d | wc -l)
