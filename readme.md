@@ -1,9 +1,9 @@
-`mtran` copies and verifies integrity of files.
+`mtran` copies huge directory and verifies files integrity.
 
 # Goal
-* Mass copy and verify integrity of files. We are dealing with terabytes of data and hundred thousands of files.
-* Re-copy file if integrity test failed.
-* Resilient to interruptions. It should pick up where it left.
+* Copy huge directory and verifies files integrity. We are dealing with terabytes of data and hundred thousands of files.
+* Re-copy files if integrity test failed.
+* Resilient to interruptions. It should pick up where it left off.
 
 # Tools looked
 * `rsync --checksum` only uses hashes to see if a file needs to be updated. It doesn't perform a hash comparison afterward. It is not resilient to interruptions.
