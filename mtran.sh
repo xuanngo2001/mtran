@@ -27,6 +27,11 @@ function F_MASS_TRANSFER()
 	    (cd "${SRC_DIR}"; tar cf - .) | (cd "${DEST_DIR}"; tar xpf -)
 	    ;;
 
+    # tar & buffer:
+    tarbuffer|copyusb)
+    (cd "${SRC_DIR}" && tar cf - .) | pv -trab -B 500M | (cd "${DEST_DIR}" && tar xpSf -)
+      ;;
+      
     # rsync: 0m57.197s, 0m53.659s
     rsync)
       rsync -a -W "${SRC_DIR}" "${DEST_DIR}"
