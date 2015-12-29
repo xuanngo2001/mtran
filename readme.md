@@ -11,3 +11,6 @@
 
 # Design
 * Reuse existing tools. Candidates? :  `cp`, `rsync`, `tar`, `pax`, `pv`, `crccp`, `mcp`, `hashdeep`
+
+
+* `cpio` unfortunately has an 8GB upper limit for files. http://serverfault.com/a/425671
