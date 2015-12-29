@@ -1,5 +1,10 @@
 `mtran` copies huge directory and verifies files integrity.
 
+# Usage
+    
+    ./mtran copy SRC_DIR DEST_DIR
+
+
 # Goal
 * Copy huge directory and verifies files integrity. We are dealing with terabytes of data and hundred thousands of files.
 * Re-copy files if integrity test failed.
