@@ -21,26 +21,28 @@ function F_MASS_TRANSFER()
   
   
 	case "${ACTION}" in
+
+    # cp: plain copy.
+    cp)
+      cp -a "${SRC_DIR}" "${DEST_DIR}"
+      ;;
 	  
-	  # tar: 0m49.923s, 0m46.756s
+	  # tar: use tar to copy.
 	  tar|copy)
-	    (cd "${SRC_DIR}"; tar cf - .) | (cd "${DEST_DIR}"; tar xpf -)
+	    (cd "${SRC_DIR}"; tar cf - .) | (cd "${DEST_DIR}"; tar xpSf -)
 	    ;;
 
-    # tar & buffer:
+    # tar & buffer: use tar and buffer to copy when 1 of the device is slower than the other 1.
     tarbuffer|copyusb)
     (cd "${SRC_DIR}" && tar cf - .) | pv -q -B 500M | (cd "${DEST_DIR}" && tar xpSf -)
       ;;
       
     # rsync: 0m57.197s, 0m53.659s
+    # Don't use sparse with rsync: http://stackoverflow.com/a/13266131
     rsync)
       rsync -a -W "${SRC_DIR}" "${DEST_DIR}"
       ;;
 	    
-    # cp: 0m48.305s
-    cp)
-      cp -a "${SRC_DIR}" "${DEST_DIR}"
-      ;;
       	    
 	  *)
 	    echo "ERROR: Unknown action=>${ACTION}"
