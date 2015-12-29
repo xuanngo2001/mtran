@@ -21,21 +21,21 @@ function F_MASS_TRANSFER()
   if [ "${SRC_DIR}" = "${DEST_DIR}" ]; then echo "Error: Source and destination directory are the same. Aborted!"; exit 1; fi;
   
   ACTION=$(tr '[:upper:]' '[:lower:]')  # Lowercase to avoid case typo.
-	case "${ACTION}" in
+  case "${ACTION}" in
 
     # cp: plain copy.
     cp)
       cp -au "${SRC_DIR}" "${DEST_DIR}"
       ;;
-	  
-	  # tar: use tar to copy.
-	  tar|copy)
-	    (cd "${SRC_DIR}"; tar cf - .) | (cd "${DEST_DIR}"; tar xpSf -)
-	    ;;
+    
+    # tar: use tar to copy.
+    tar|copy)
+      (cd "${SRC_DIR}"; tar cf - .) | (cd "${DEST_DIR}"; tar xpSf -)
+      ;;
 
     # tar & buffer: use tar and buffer to copy when 1 of the device is slower than the other 1.
     tarbuffer|copyusb)
-    (cd "${SRC_DIR}" && tar cf - .) | pv -q -B 500M | (cd "${DEST_DIR}" && tar xpSf -)
+      (cd "${SRC_DIR}" && tar cf - .) | pv -q -B 500M | (cd "${DEST_DIR}" && tar xpSf -)
       ;;
       
     # rsync: 0m57.197s, 0m53.659s
@@ -43,13 +43,13 @@ function F_MASS_TRANSFER()
     rsync)
       rsync -a -W "${SRC_DIR}" "${DEST_DIR}"
       ;;
-	    
-      	    
-	  *)
-	    echo "ERROR: Unknown action=>${ACTION}"
-	    exit 1
-	    ;;
-	esac
+      
+            
+    *)
+      echo "ERROR: Unknown action=>${ACTION}"
+      exit 1
+      ;;
+  esac
   
 }
 
