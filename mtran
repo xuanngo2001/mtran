@@ -13,13 +13,13 @@ function F_MASS_TRANSFER()
   if [ ! -d "${SRC_DIR}" ]; then echo "Error: Source directory: ${SRC_DIR}: no such directory. Aborted!"; exit 1; fi;
   if [ ! -d "${DEST_DIR}" ]; then echo "Error: Destination directory: ${DEST_DIR}: no such directory. Aborted!"; exit 1; fi;
   
+  
   SRC_DIR=$(readlink -ev "${SRC_DIR}")
   DEST_DIR=$(readlink -ev "${DEST_DIR}")
   
-  echo "${SRC_DIR}"
-  echo "${DEST_DIR}"
-  
-  
+  # Stop if source and destination directory are the same.
+  if [ "${SRC_DIR}" = "${DEST_DIR}" ]; then echo "Error: Source and destination directory are the same. Aborted!"; exit 1; fi;
+    
 	case "${ACTION}" in
 
     # cp: plain copy.
