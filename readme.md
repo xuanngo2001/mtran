@@ -54,7 +54,6 @@ http://unix.stackexchange.com/a/66660
   write it back out to the new location.  In the "tar c | buffer | tar
   x" case though, the "tar c" is making its own list of files, then
   packing them up and piping the whole bundle off to the buffer (our
-  BTS?), where it is then ready to be unpacked by the "tar x".  Hmmm.
-
+  BTS?), where it is then ready to be unpacked by the "tar x".  Hmmm. 
   "cpio" doesn't know how to find, it just knows how to archive or copy
   through...
