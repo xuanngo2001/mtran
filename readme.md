@@ -10,6 +10,12 @@
 * Re-copy files if integrity test failed.
 * Resilient to interruptions. It should pick up where it left off.
 
+# Test cases
+* Copy within the same devices: internal hard drive, usb key, external hard drive trough usb.
+* Copy from fast device to slow device: internal hard drive to external usb hard drive.
+* Copy from slow device to faster device: external usb hard drive to internal hard drive.
+ 
+
 # Tools looked
 * `rsync --checksum` only uses hashes to see if a file needs to be updated. It doesn't perform a hash comparison afterward. It is not resilient to interruptions.
 * `quickhash`
