@@ -40,7 +40,8 @@ http://unix.stackexchange.com/a/66660
     two file systems (though in reality, you'll probably have a disk slower that the other and the OS' write back
      mechanism will do that buffering as well so it will probably not make much difference).
  
- ## File copy method that is twice as fast as "cp -a"
+
+## File copy method that is twice as fast as "cp -a"
  
  https://lists.debian.org/debian-user/2001/06/msg00288.html
  
