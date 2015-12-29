@@ -19,7 +19,8 @@ function F_MASS_TRANSFER()
   
   # Stop if source and destination directory are the same.
   if [ "${SRC_DIR}" = "${DEST_DIR}" ]; then echo "Error: Source and destination directory are the same. Aborted!"; exit 1; fi;
-    
+  
+  ACTION=$(tr '[:upper:]' '[:lower:]')  # Lowercase to avoid case typo.
 	case "${ACTION}" in
 
     # cp: plain copy.
