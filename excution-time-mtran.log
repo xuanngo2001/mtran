@@ -1,10 +1,22 @@
 # Line format: Separator=;
 #   date and time; test case description; data set property; commands; elapsed time in seconds
-2015-12-30_14.30.05; Same disk but different partition; Size=257M, files=4144, directories=993; cp; 42
-2015-12-30_14.30.05; Same disk but different partition; Size=257M, files=4144, directories=993; tar; 41
-2015-12-30_14.30.05; Same disk but different partition; Size=257M, files=4144, directories=993; tarbuffer; 41
-2015-12-30_14.30.05; Same disk but different partition; Size=257M, files=4144, directories=993; tarpvbuffer; 36
-2015-12-30_14.30.05; Same disk but different partition; Size=257M, files=4144, directories=993; rsync; 51
-2015-12-30_14.55.47; Same disk but different partition; Size=257M, files=4144, directories=993; cp; 33
-2015-12-30_14.55.47; Same disk but different partition; Size=257M, files=4144, directories=993; tar; 34
-2015-12-30_14.55.47; Same disk but different partition; Size=257M, files=4144, directories=993; tarbuffer; 36
+2015-12-21_14.30.05; Same disk but different partition; Size=257M, files=4144, directories=993; cp; 42
+2015-12-21_14.30.05; Same disk but different partition; Size=257M, files=4144, directories=993; tar; 41
+2015-12-21_14.30.05; Same disk but different partition; Size=257M, files=4144, directories=993; tarbuffer; 41
+2015-12-21_14.30.05; Same disk but different partition; Size=257M, files=4144, directories=993; tarpvbuffer; 36
+2015-12-21_14.30.05; Same disk but different partition; Size=257M, files=4144, directories=993; rsync; 51
+2015-12-27_14.55.47; Same disk but different partition; Size=257M, files=4144, directories=993; cp; 33
+2015-12-27_14.55.47; Same disk but different partition; Size=257M, files=4144, directories=993; tar; 34
+2015-12-27_14.55.47; Same disk but different partition; Size=257M, files=4144, directories=993; tarbuffer; 36
+2015-12-27_14.55.47; Same disk but different partition; Size=257M, files=4144, directories=993; tarpvbuffer; 81
+2015-12-27_14.55.47; Same disk but different partition; Size=257M, files=4144, directories=993; rsync; 49
+2015-12-30_15.03.32; Same disk but different partition; Size=257M, files=4144, directories=993; cp; 33
+2015-12-30_15.03.32; Same disk but different partition; Size=257M, files=4144, directories=993; tar; 29
+2015-12-30_15.03.32; Same disk but different partition; Size=257M, files=4144, directories=993; tarbuffer; 29
+2015-12-30_15.03.32; Same disk but different partition; Size=257M, files=4144, directories=993; tarpvbuffer; 25
+2015-12-30_15.03.32; Same disk but different partition; Size=257M, files=4144, directories=993; rsync; 42
+2015-12-30_15.12.56; Same disk but different partition; Size=257M, files=4144, directories=993; cp; 28
+2015-12-30_15.12.56; Same disk but different partition; Size=257M, files=4144, directories=993; tar; 28
+2015-12-30_15.12.56; Same disk but different partition; Size=257M, files=4144, directories=993; tarbuffer; 27
+2015-12-30_15.12.56; Same disk but different partition; Size=257M, files=4144, directories=993; tarpvbuffer; 26
+2015-12-30_15.12.56; Same disk but different partition; Size=257M, files=4144, directories=993; rsync; 44
