@@ -36,19 +36,16 @@ do
   TEST_DIR="${DEST_DIR}/${DATE_STRING}-${COPY_CMD}-${RANDOM}"
   mkdir -p "${TEST_DIR}"
   
-  # Create temporary log file.
-  TMP_LOG=tmp-mtran.log
-  
   # Time the execution.
-  echo "time ./mtran ${COPY_CMD} ${SRC_DIR} ${TEST_DIR} ..."
-  { time ./mtran ${COPY_CMD} "${SRC_DIR}" "${TEST_DIR}"; } 2>> "${TMP_LOG}"
+  echo "Run ./mtran ${COPY_CMD} ${SRC_DIR} ${TEST_DIR} ..."
+  RUNTIME="$(date +%s)"               # Start timer.
+  ./mtran ${COPY_CMD} "${SRC_DIR}" "${TEST_DIR}"
+  RUNTIME="$(($(date +%s)-RUNTIME))"  # End timer.
   
   # Log execution time. Separator=;
-  echo -n "${DATE_STRING}; ${TEST_CASE_DESC}; ${SRC_STATS}; ${COPY_CMD}; " >> "${MASTER_LOG}"
-  cat "${TMP_LOG}" | tr '\r\n' ' ' >> "${MASTER_LOG}"
+  echo "${DATE_STRING}; ${TEST_CASE_DESC}; ${SRC_STATS}; ${COPY_CMD}; ${RUNTIME}" >> "${MASTER_LOG}"
   echo "" >> "${MASTER_LOG}"
   
   # Cleanup
-  rm -rf "${TMP_LOG}"
   rm -rf "${TEST_DIR}"
 done
