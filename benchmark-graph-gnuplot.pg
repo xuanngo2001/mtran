@@ -1,0 +1,36 @@
+#!/usr/bin/gnuplot
+reset
+
+set terminal png size 2900,2300
+set output "excution-time-mtran.png"
+
+#set terminal svg size 2900,2300 dynamic
+#set output "list-script-size.svg"
+
+set datafile separator ";"
+
+set xdata time
+set timefmt "%Y-%m-%d"
+
+set decimal locale
+set format y "%'8.2f"
+set format x "%m-%d"
+
+set xlabel "Date"
+set ylabel "Size in kilobytes"
+
+# Increment of each tic: 1 day = 86400 seconds.
+set xtics 86400
+
+# Set x label vertical.
+set xtics rotate
+
+set title "Size per script"
+set key reverse Left outside
+set grid
+
+set style data linespoints
+
+# Plot commands will will be appended here.
+
+
