@@ -17,9 +17,23 @@ mkdir -p "${WORK_DIR}"
 WORK_DIR=$(readlink -ev "${WORK_DIR}")
 
 
-# Separate runtimes of each command in its respective file.
+
+PLOT_CMD="plot"
 COPY_CMDS=( cp tar tarbuffer tarpvbuffer rsync )
 for COPY_CMD in "${COPY_CMDS[@]}"
 do
-  grep -F "; ${COPY_CMD};" "${EXE_TIME_LOG}" > "${WORK_DIR}/${COPY_CMD}.log"
+  COPY_CMD_LOG="${WORK_DIR}/${COPY_CMD}.log"
+  # Separate runtimes of each command in its respective file.
+  grep -F "; ${COPY_CMD};" "${EXE_TIME_LOG}" > "${COPY_CMD_LOG}"
+    COPY_CMD_LOG=$(readlink -ev "${COPY_CMD_LOG}")
+    
+  # Build plot commands. 
+  PLOT_CMD="${PLOT_CMD} \"${COPY_CMD_LOG}\" using 1:5 title \"${COPY_CMD}\","
 done
+
+GNUPLOT_PG=benchmark-graph-gnuplot.pg
+
+# Delete last plot command.
+sed -i 's/^plot //' "${GNUPLOT_PG}"
+# Delete the last comma(,) and add plot command.
+echo "${PLOT_CMD}" | sed 's/,$//' >> "${GNUPLOT_PG}"
