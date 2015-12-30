@@ -4,23 +4,14 @@ reset
 set terminal png size 2900,2300
 set output "excution-time-mtran.png"
 
-#set terminal svg size 2900,2300 dynamic
-#set output "list-script-size.svg"
-
 set datafile separator ";"
-
-set xdata time
-set timefmt "%Y-%m-%d_%H.%M.%S"
 
 set decimal locale
 set format y "%'.0f"
-set format x "%m-%d"
 
-set xlabel "Date"
+# Labels
+set xlabel "Data set"
 set ylabel "Runtime in seconds"
-
-# Increment of each tic: 1 day = 86400 seconds.
-set xtics 86400
 
 # Set x label vertical.
 set xtics rotate
@@ -31,5 +22,6 @@ set grid
 
 set style data linespoints
 
-# Plot commands will will be appended here.
-plot "/media/master/github/mtran/tmp-working/cp.log" using 1:5 title "cp", "/media/master/github/mtran/tmp-working/tar.log" using 1:5 title "tar", "/media/master/github/mtran/tmp-working/tarbuffer.log" using 1:5 title "tarbuffer", "/media/master/github/mtran/tmp-working/tarpvbuffer.log" using 1:5 title "tarpvbuffer", "/media/master/github/mtran/tmp-working/rsync.log" using 1:5 title "rsync"
+# Auto-generated command start here.
+set xtics ("2015-12-21_14.30.05" 1,"2015-12-27_14.55.47" 2,"2015-12-30_15.03.32" 3,"2015-12-30_15.12.56" 4,"2015-12-30_17.28.50" 5,"2015-12-30_17.42.05" 6)
+plot "/media/master/github/mtran/tmp-working/cp.log" using 0:5:xtic(3) title "cp", "/media/master/github/mtran/tmp-working/tar.log" using 0:5:xtic(3) title "tar", "/media/master/github/mtran/tmp-working/tarbuffer.log" using 0:5:xtic(3) title "tarbuffer", "/media/master/github/mtran/tmp-working/tarpvbuffer.log" using 0:5:xtic(3) title "tarpvbuffer", "/media/master/github/mtran/tmp-working/rsync.log" using 0:5:xtic(3) title "rsync"
