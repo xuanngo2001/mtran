@@ -14,3 +14,7 @@
 2015-12-29_13.58.24; Size=208M, files=5241, directories=364; tar;  real	0m42.871s user	0m0.024s sys	0m8.444s 
 2015-12-29_13.58.24; Size=208M, files=5241, directories=364; tarbuffer;  real	0m42.433s user	0m0.176s sys	0m8.580s 
 2015-12-29_13.58.24; Size=208M, files=5241, directories=364; rsync;  real	0m38.885s user	0m0.576s sys	0m11.324s 
+2015-12-30_11.29.45; Same disk but different partition; Size=257M, files=4143, directories=993; cp;  real	0m29.173s user	0m0.036s sys	0m6.712s 
+2015-12-30_11.29.45; Same disk but different partition; Size=257M, files=4143, directories=993; tar;  real	0m31.784s user	0m0.188s sys	0m6.436s 
+2015-12-30_11.29.45; Same disk but different partition; Size=257M, files=4143, directories=993; tarbuffer;  real	0m30.805s user	0m0.152s sys	0m6.604s 
+2015-12-30_11.29.45; Same disk but different partition; Size=257M, files=4143, directories=993; rsync;  real	0m52.089s user	0m1.056s sys	0m17.124s 
