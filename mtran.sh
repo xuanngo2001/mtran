@@ -20,7 +20,10 @@ function F_MASS_TRANSFER()
   
   # Stop if source and destination directory are the same.
   if [ "${SRC_DIR}" = "${DEST_DIR}" ]; then echo "Error: Source and destination directory are the same. Aborted!"; exit 1; fi;
-  
+
+  SRC_BASE_DIR=$(dirname "${SRC_DIR}")
+  SRC_DIR_NAME=$(basename "${SRC_DIR}")
+
   ACTION=$(echo "${ACTION}" | tr '[:upper:]' '[:lower:]')  # Lowercase to avoid case typo.
   case "${ACTION}" in
 
@@ -30,24 +33,28 @@ function F_MASS_TRANSFER()
       ;;
     
     # tar: use tar to copy.
-    tar|copy)
-      (cd "${SRC_DIR}"; tar cf - .) | (cd "${DEST_DIR}"; tar xpSf -)
+    tar)
+      (tar -C "${SRC_BASE_DIR}" -cf - "${SRC_DIR_NAME}") | (tar -C "${DEST_DIR}" -xpSf -)
       ;;
 
     # tar & buffer: use tar and buffer to copy when 1 of the device is slower than the other 1.
-    tarbuffer|copyusb)
-      (cd "${SRC_DIR}" && tar cf - .) | pv -q -B 500M | (cd "${DEST_DIR}" && tar xpSf -)
+    tarpvbuffer)
+      (tar -C "${SRC_BASE_DIR}" -cf - "${SRC_DIR_NAME}") | pv -q -B 1024M | (tar -C "${DEST_DIR}" -xpSf -)
       ;;
-      
+
+    # tar & buffer: use tar and buffer to copy when 1 of the device is slower than the other 1.
+    tarbuffer)
+      (tar -C "${SRC_BASE_DIR}" -cf - "${SRC_DIR_NAME}") | buffer -m 8M | (tar -C "${DEST_DIR}" -xpSf -)
+      ;;
+
     # rsync: Don't use sparse with rsync: http://stackoverflow.com/a/13266131
     rsync)
       rsync -a -W "${SRC_DIR}" "${DEST_DIR}"
       ;;
-      
-    # Use diff to compare 2 directories.
-    diffdir)
-      diff --suppress-common-lines "${SRC_DIR}" "${DEST_DIR}"
-      ;;      
+    
+    diff)
+      diff -r "${SRC_DIR}" "${DEST_DIR}/${SRC_DIR_NAME}"
+      ;;
             
     *)
       echo "ERROR: Unknown action=>${ACTION}"
