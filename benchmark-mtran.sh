@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-# Description: Time different command of mtran.
+# Description: Time different commands of mtran.
 #   -Should I reboot for every run?
 # Real, User and Sys process time statistics: http://stackoverflow.com/a/556411
 
