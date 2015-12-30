@@ -27,7 +27,7 @@ SRC_STATS="Size=${SRC_SIZE}, files=${SRC_FILES}, directories=${SRC_DIRS}"
 echo "Test data: ${SRC_STATS}"
 
 DATE_STRING=$(date +"%Y-%m-%d_%0k.%M.%S")
-COPY_CMDS=( cp tar tarbuffer rsync )
+COPY_CMDS=( cp tar tarbuffer tarpvbuffer rsync )
 MASTER_LOG=excution-time-mtran.log
 for COPY_CMD in "${COPY_CMDS[@]}"
 do
