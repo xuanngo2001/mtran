@@ -1,7 +1,2 @@
 # Line format: Separator=;
-#   date and time; test case description; data set property; commands; results
-2015-12-30_11.43.04; Same disk but different partition; Size=257M, files=4144, directories=993; cp;  real	0m26.597s user	0m0.028s sys	0m6.244s 
-2015-12-30_11.43.04; Same disk but different partition; Size=257M, files=4144, directories=993; tar;  real	0m26.916s user	0m0.168s sys	0m6.168s 
-2015-12-30_11.43.04; Same disk but different partition; Size=257M, files=4144, directories=993; tarbuffer;  real	0m26.340s user	0m0.168s sys	0m6.164s 
-2015-12-30_11.43.04; Same disk but different partition; Size=257M, files=4144, directories=993; tarpvbuffer;  real	0m26.788s user	0m0.160s sys	0m6.268s 
-2015-12-30_11.43.04; Same disk but different partition; Size=257M, files=4144, directories=993; rsync;  real	0m45.112s user	0m0.988s sys	0m16.420s 
+#   date and time; test case description; data set property; commands; elapsed time in seconds
