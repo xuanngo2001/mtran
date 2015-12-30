@@ -44,7 +44,6 @@ do
   
   # Log execution time. Separator=;
   echo "${DATE_STRING}; ${TEST_CASE_DESC}; ${SRC_STATS}; ${COPY_CMD}; ${RUNTIME}" >> "${MASTER_LOG}"
-  echo "" >> "${MASTER_LOG}"
   
   # Cleanup
   rm -rf "${TEST_DIR}"
