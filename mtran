@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 # Description: Mass copy and verify files integrity.
+#   Copy SOURCE_DIR to DESTINATION_DIR
 
 function F_MASS_TRANSFER()
 {
