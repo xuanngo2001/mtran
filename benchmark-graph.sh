@@ -17,9 +17,9 @@ mkdir -p "${WORK_DIR}"
 WORK_DIR=$(readlink -ev "${WORK_DIR}")
 
 
+# Separate runtimes of each command in its respective file.
 COPY_CMDS=( cp tar tarbuffer tarpvbuffer rsync )
 for COPY_CMD in "${COPY_CMDS[@]}"
 do
-  # grep command | delete after 'user' | delete 'real'
-  grep -F "; ${COPY_CMD};" "${EXE_TIME_LOG}" | sed 's/s user.*/s/' | sed 's/;  real\t/; /'> "${WORK_DIR}/${COPY_CMD}.log"
+  grep -F "; ${COPY_CMD};" "${EXE_TIME_LOG}" > "${WORK_DIR}/${COPY_CMD}.log"
 done
