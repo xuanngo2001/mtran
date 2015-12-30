@@ -17,7 +17,7 @@ set format y "%'.0f"
 set format x "%m-%d"
 
 set xlabel "Date"
-set ylabel "Runtime"
+set ylabel "Runtime in seconds"
 
 # Increment of each tic: 1 day = 86400 seconds.
 set xtics 86400
@@ -32,4 +32,5 @@ set grid
 set style data linespoints
 
 # Plot commands will will be appended here.
+
 plot "/media/master/github/mtran/tmp-working/cp.log" using 1:5 title "cp", "/media/master/github/mtran/tmp-working/tar.log" using 1:5 title "tar", "/media/master/github/mtran/tmp-working/tarbuffer.log" using 1:5 title "tarbuffer", "/media/master/github/mtran/tmp-working/tarpvbuffer.log" using 1:5 title "tarpvbuffer", "/media/master/github/mtran/tmp-working/rsync.log" using 1:5 title "rsync"
