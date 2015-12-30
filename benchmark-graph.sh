@@ -34,6 +34,6 @@ done
 GNUPLOT_PG=benchmark-graph-gnuplot.pg
 
 # Delete last plot command.
-sed -i 's/^plot //' "${GNUPLOT_PG}"
+sed -i 's/^plot .*//' "${GNUPLOT_PG}"
 # Delete the last comma(,) and add plot command.
 echo "${PLOT_CMD}" | sed 's/,$//' >> "${GNUPLOT_PG}"
