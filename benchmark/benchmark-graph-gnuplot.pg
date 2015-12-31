@@ -10,11 +10,12 @@ set decimal locale
 set format y "%'.0f"
 
 # Labels
-set xlabel "Data set"
+set xlabel "Dataset"
 set ylabel "Runtime in seconds"
 
-# Set x label vertical.
+# Set xtic properties.
 set xtics rotate
+set xtics font ", 9"
 
 set title "Runtime per command"
 set key reverse Left outside
@@ -23,5 +24,5 @@ set grid
 set style data linespoints
 
 # Auto-generated command start here.
-set xtics ("2015-12-21_14.30.05" 1,"2015-12-27_14.55.47" 2,"2015-12-30_15.03.32" 3,"2015-12-30_15.12.56" 4,"2015-12-30_17.28.50" 5,"2015-12-30_17.42.05" 6,"2015-12-31_09.18.06" 7)
+set xtics ("2015-12-21_14.30.05" 1,"2015-12-27_14.55.47" 2,"2015-12-30_15.03.32" 3,"2015-12-30_15.12.56" 4,"2015-12-30_17.28.50" 5,"2015-12-30_17.42.05" 6,"2015-12-31_09.18.06" 7,"2015-12-31_09.33.54" 8,"2015-12-31_09.46.11" 9)
 plot "/media/master/github/mtran/benchmark/tmp-working/cp.log" using 0:5:xtic(3) title "cp", "/media/master/github/mtran/benchmark/tmp-working/tar.log" using 0:5:xtic(3) title "tar", "/media/master/github/mtran/benchmark/tmp-working/tarbuffer.log" using 0:5:xtic(3) title "tarbuffer", "/media/master/github/mtran/benchmark/tmp-working/tarpvbuffer.log" using 0:5:xtic(3) title "tarpvbuffer", "/media/master/github/mtran/benchmark/tmp-working/rsync.log" using 0:5:xtic(3) title "rsync"
