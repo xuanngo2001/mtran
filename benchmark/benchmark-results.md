@@ -13,7 +13,7 @@ The copy commands were executed through [mtran.sh](https://github.com/limelime/m
 In general, use `tar|pv|tar`.
 
 # Commands code
-<code>
+```bash
   case "${ACTION}" in
 
     # cp: plain copy.
@@ -50,4 +50,4 @@ In general, use `tar|pv|tar`.
       exit 1
       ;;
   esac
-</code>
+```
