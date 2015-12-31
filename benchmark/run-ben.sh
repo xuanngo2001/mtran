@@ -5,3 +5,4 @@ set -e
 ./benchmark-mtran.sh /media/master/mywiki_deprecated/ /media/sf_shared/test-data/ "Same disk, diff partition"
 
 ./benchmark-graph.sh
+./benchmark-results.sh
