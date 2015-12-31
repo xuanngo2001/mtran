@@ -35,13 +35,18 @@
 2015-12-31_09.18.06; Same disk, diff partition; 257M, 4144 files, 993 dirs; tarbuffer; 44
 2015-12-31_09.18.06; Same disk, diff partition; 257M, 4144 files, 993 dirs; tarpvbuffer; 41
 2015-12-31_09.18.06; Same disk, diff partition; 257M, 4144 files, 993 dirs; rsync; 55
-2015-12-31_09.33.54; Same disk, diff partition; 257M, files=4144, 993 dirs; cp; 40
-2015-12-31_09.33.54; Same disk, diff partition; 257M, files=4144, 993 dirs; tar; 39
-2015-12-31_09.33.54; Same disk, diff partition; 257M, files=4144, 993 dirs; tarbuffer; 32
-2015-12-31_09.33.54; Same disk, diff partition; 257M, files=4144, 993 dirs; tarpvbuffer; 27
-2015-12-31_09.33.54; Same disk, diff partition; 257M, files=4144, 993 dirs; rsync; 46
+2015-12-31_09.33.54; Same disk, diff partition; 257M, 4144 files, 993 dirs; cp; 40
+2015-12-31_09.33.54; Same disk, diff partition; 257M, 4144 files, 993 dirs; tar; 39
+2015-12-31_09.33.54; Same disk, diff partition; 257M, 4144 files, 993 dirs; tarbuffer; 32
+2015-12-31_09.33.54; Same disk, diff partition; 257M, 4144 files, 993 dirs; tarpvbuffer; 27
+2015-12-31_09.33.54; Same disk, diff partition; 257M, 4144 files, 993 dirs; rsync; 46
 2015-12-31_09.46.11; Same disk, diff partition; 257M, 4144 files, 993 dirs; cp; 30
 2015-12-31_09.46.11; Same disk, diff partition; 257M, 4144 files, 993 dirs; tar; 28
 2015-12-31_09.46.11; Same disk, diff partition; 257M, 4144 files, 993 dirs; tarbuffer; 27
 2015-12-31_09.46.11; Same disk, diff partition; 257M, 4144 files, 993 dirs; tarpvbuffer; 28
 2015-12-31_09.46.11; Same disk, diff partition; 257M, 4144 files, 993 dirs; rsync; 44
+2015-12-31_10.17.41; Same disk, diff partition; 257M, 4144 files, 993 dirs; cp; 27
+2015-12-31_10.17.41; Same disk, diff partition; 257M, 4144 files, 993 dirs; tar; 28
+2015-12-31_10.17.41; Same disk, diff partition; 257M, 4144 files, 993 dirs; tarbuffer; 28
+2015-12-31_10.17.41; Same disk, diff partition; 257M, 4144 files, 993 dirs; tarpvbuffer; 28
+2015-12-31_10.17.41; Same disk, diff partition; 257M, 4144 files, 993 dirs; rsync; 43
