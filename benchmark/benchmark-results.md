@@ -12,4 +12,80 @@ The copy commands were executed through [mtran.sh](https://github.com/limelime/m
 
 In general, use `tar|pv|tar`.
 
-# Commands details
+# Commands code
+<code>
+  case "${ACTION}" in
+
+    # cp: plain copy.
+    cp)
+      cp -au "${SRC_DIR}" "${DEST_DIR}"
+      ;;
+    
+    # tar: use tar to copy.
+    tar)
+      (tar -C "${SRC_BASE_DIR}" -cf - "${SRC_DIR_NAME}") | (tar -C "${DEST_DIR}" -xpSf -)
+      ;;
+
+    # tar & buffer: use tar and buffer to copy when 1 of the device is slower than the other 1.
+    tarpvbuffer)
+      (tar -C "${SRC_BASE_DIR}" -cf - "${SRC_DIR_NAME}") | pv -q -B 1024M | (tar -C "${DEST_DIR}" -xpSf -)
+      ;;
+
+    # tar & buffer: use tar and buffer to copy when 1 of the device is slower than the other 1.
+    tarbuffer)
+      (tar -C "${SRC_BASE_DIR}" -cf - "${SRC_DIR_NAME}") | buffer -m 8M | (tar -C "${DEST_DIR}" -xpSf -)
+      ;;
+
+    # rsync: Don't use sparse with rsync: http://stackoverflow.com/a/13266131
+    rsync)
+      rsync -a -W "${SRC_DIR}" "${DEST_DIR}"
+      ;;
+    
+    diff)
+      diff -r "${SRC_DIR}" "${DEST_DIR}/${SRC_DIR_NAME}"
+      ;;
+            
+    *)
+      echo "ERROR: Unknown action=>${ACTION}"
+      exit 1
+      ;;
+  esac
+</code>
+<code>
+  case "${ACTION}" in
+
+    # cp: plain copy.
+    cp)
+      cp -au "${SRC_DIR}" "${DEST_DIR}"
+      ;;
+    
+    # tar: use tar to copy.
+    tar)
+      (tar -C "${SRC_BASE_DIR}" -cf - "${SRC_DIR_NAME}") | (tar -C "${DEST_DIR}" -xpSf -)
+      ;;
+
+    # tar & buffer: use tar and buffer to copy when 1 of the device is slower than the other 1.
+    tarpvbuffer)
+      (tar -C "${SRC_BASE_DIR}" -cf - "${SRC_DIR_NAME}") | pv -q -B 1024M | (tar -C "${DEST_DIR}" -xpSf -)
+      ;;
+
+    # tar & buffer: use tar and buffer to copy when 1 of the device is slower than the other 1.
+    tarbuffer)
+      (tar -C "${SRC_BASE_DIR}" -cf - "${SRC_DIR_NAME}") | buffer -m 8M | (tar -C "${DEST_DIR}" -xpSf -)
+      ;;
+
+    # rsync: Don't use sparse with rsync: http://stackoverflow.com/a/13266131
+    rsync)
+      rsync -a -W "${SRC_DIR}" "${DEST_DIR}"
+      ;;
+    
+    diff)
+      diff -r "${SRC_DIR}" "${DEST_DIR}/${SRC_DIR_NAME}"
+      ;;
+            
+    *)
+      echo "ERROR: Unknown action=>${ACTION}"
+      exit 1
+      ;;
+  esac
+</code>
