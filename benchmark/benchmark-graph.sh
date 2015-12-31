@@ -3,7 +3,7 @@ set -e
 # Description: Graph execution time different commands of mtran.
 
 EXE_TIME_LOG=$1
-EXE_TIME_LOG=excution-time-mtran.log
+EXE_TIME_LOG=benchmark-results.log
 
 # Error handling.
 if [ ! -f "${EXE_TIME_LOG}" ]; then echo "Error: Execution time log: ${SRC_DIR}: no such file. Aborted!"; exit 1; fi;
