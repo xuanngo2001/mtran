@@ -48,3 +48,6 @@ do
   # Cleanup
   rm -rf "${TEST_DIR}"
 done
+
+# Add newline to separte between dataset.
+echo "" >> "${RESULTS_LOG}"
