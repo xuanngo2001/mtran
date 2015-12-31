@@ -28,7 +28,7 @@ echo "Test data: ${SRC_STATS}"
 
 DATE_STRING=$(date +"%Y-%m-%d_%0k.%M.%S")
 COPY_CMDS=( cp tar tarbuffer tarpvbuffer rsync )
-MASTER_LOG=excution-time-mtran.log
+RESULTS_LOG=benchmark-results.log
 for COPY_CMD in "${COPY_CMDS[@]}"
 do
 
@@ -43,7 +43,7 @@ do
   RUNTIME="$(($(date +%s)-RUNTIME))"  # End timer.
   
   # Log execution time. Separator=;
-  echo "${DATE_STRING}; ${TEST_CASE_DESC}; ${SRC_STATS}; ${COPY_CMD}; ${RUNTIME}" >> "${MASTER_LOG}"
+  echo "${DATE_STRING}; ${TEST_CASE_DESC}; ${SRC_STATS}; ${COPY_CMD}; ${RUNTIME}" >> "${RESULTS_LOG}"
   
   # Cleanup
   rm -rf "${TEST_DIR}"
