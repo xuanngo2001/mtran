@@ -16,7 +16,7 @@ For details, see [Commands code section](#commands-code).
 # Conclusion
 * `rsync` is always slower than `cp` and `tar`.
 * `tar` is a little big faster than `cp` and doesn't suffer big copy speed fluctuation like `cp`.
-* Adding buffer to `tar` doesn't significantly improve copying speed. There are virtually the same. That being said, `tar|pv|tar` is relatively better than `tar` and `tar|buffer|tar`. 
+* Adding buffer to `tar` doesn't significantly improve copying speed of `tar` itself. There are virtually the same. That being said, `tar|pv|tar` is relatively better than `tar` and `tar|buffer|tar`. 
 
 In general, use `tar|pv|tar`.
 
