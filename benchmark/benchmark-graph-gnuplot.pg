@@ -16,7 +16,7 @@ set ylabel "Runtime in seconds"
 set xtics rotate
 set xtics font ", 8"
 
-set title "Runtime per command"
+set title "Runtime per command - ".strftime("%Y-%m-%d", time(0))
 set key reverse Left outside
 set grid
 
