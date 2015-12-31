@@ -11,3 +11,5 @@ The copy commands were executed through [mtran.sh](https://github.com/limelime/m
 * Adding buffer to `tar` doesn't significantly improve copying speed. There are virtually the same. That being said, `tar|pv|tar` is relatively better than `tar` and `tar|buffer|tar`. 
 
 In general, use `tar|pv|tar`.
+
+# Commands details
