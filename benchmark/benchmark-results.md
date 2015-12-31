@@ -4,9 +4,9 @@
 The copy commands were executed using [mtran.sh](https://github.com/limelime/mtran/blob/master/mtran.sh) script:
 
 * **cp**: copy using the plain `cp` command.
-* **tar**: copy using tar piping, `tar|tar`.
-* **tarbuffer**: use `buffer` to handle the buffering between the tar piping to do the copy, `tar|buffer|tar`.
-* **tarpvbuffer**: use `pv` to handle the buffering between the tar piping to do the copy, `tar|pv|tar`.
+* **tar**: copy using `tar` and pipe, `tar|tar`.
+* **tarbuffer**: copy using `tar` and add `buffer` to handle the buffering between the pipes, `tar|buffer|tar`.
+* **tarpvbuffer**: copy using `tar` and add `pv` to handle the buffering between the pipes, `tar|pv|tar`.
 * **rsync**: copy using the plain `rsync` command.
 
 For details, see [Commands code section](#commands-code).
