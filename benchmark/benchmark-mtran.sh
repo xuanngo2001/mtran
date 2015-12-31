@@ -39,7 +39,7 @@ do
   # Time the execution.
   echo "Run ./mtran ${COPY_CMD} ${SRC_DIR} ${TEST_DIR} ..."
   RUNTIME="$(date +%s)"               # Start timer.
-  ./mtran ${COPY_CMD} "${SRC_DIR}" "${TEST_DIR}"
+  mtran ${COPY_CMD} "${SRC_DIR}" "${TEST_DIR}"
   RUNTIME="$(($(date +%s)-RUNTIME))"  # End timer.
   
   # Log execution time. Separator=;
