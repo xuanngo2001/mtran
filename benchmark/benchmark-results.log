@@ -87,3 +87,4 @@
 2015-12-31_13.51.26; Same disk, diff partition; 257M, 4144 files, 993 dirs; rsync; 47
 
 2015-12-31_13.54.28; Same disk, diff partition; 500M, 12450 files, 1293 dirs; cp; 64
+2015-12-31_13.54.28; Same disk, diff partition; 500M, 12450 files, 1293 dirs; tar; 65

@@ -37,7 +37,7 @@ do
   mkdir -p "${TEST_DIR}"
   
   # Time the execution.
-  echo "\tRunning mtran ${COPY_CMD} ${SRC_DIR} ${TEST_DIR} ..."
+  echo "   Running mtran ${COPY_CMD} ${SRC_DIR} ${TEST_DIR} ..."
   RUNTIME="$(date +%s)"               # Start timer.
   mtran ${COPY_CMD} "${SRC_DIR}" "${TEST_DIR}"
   RUNTIME="$(($(date +%s)-RUNTIME))"  # End timer.
