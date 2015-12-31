@@ -2,7 +2,7 @@
 reset
 
 set terminal png size 2900,2300
-set output "excution-time-mtran.png"
+set output "benchmark-results.png"
 
 set datafile separator ";"
 
