@@ -8,7 +8,7 @@ The copy commands were executed using [mtran.sh](https://github.com/limelime/mtr
 * **tarpvbuffer**: use `pv` to handle the buffering between the tar piping to do the copy, `tar|pv|tar`.
 * **rsync**: copy using the plain `rsync` command.
 
-For details, see [Commands code section](#commands-code)
+For details, see [Commands code section](#commands-code).
 
 # Results
 ![alt text](https://raw.githubusercontent.com/limelime/mtran/master/benchmark/benchmark-results.png "Copy commands performance results")
