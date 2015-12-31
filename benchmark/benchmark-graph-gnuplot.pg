@@ -10,7 +10,7 @@ set decimal locale
 set format y "%'.0f"
 
 # Labels
-set ylabel "Runtime in seconds"
+set ylabel "Copy speed in seconds"
 
 # Set xtic properties.
 set xtics rotate
