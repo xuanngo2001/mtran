@@ -9,7 +9,6 @@ if [ ! -d "${LOGFILE_DIR}" ]; then echo "Error: Log file directory: ${LOGFILE_DI
 LOGFILE_DIR=$(readlink -ev "${LOGFILE_DIR}")
 
 while IFS='' read -r LOGFILE || [[ -n "$LOGFILE" ]]; do    
-  echo "$LOGFILE"
   sort -t ';' -k2,2 -k3,3 "${LOGFILE}" -o "${LOGFILE}"
 done < <( find "${LOGFILE_DIR}" -type f -name "*.log" )
  
