@@ -7,4 +7,4 @@ The copy commands were executed through [mtran.sh](https://github.com/limelime/m
 
 # Conclusion
 * `rsync` is always slower than `cp` and `tar`.
-* `tar` is a little big faster than `cp` and doesn't have suffer big fluctuation of copying like `cp`.
+* `tar` is a little big faster than `cp` and doesn't suffer big fluctuation of copying like `cp`.
