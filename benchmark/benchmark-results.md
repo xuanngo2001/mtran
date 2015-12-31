@@ -2,11 +2,11 @@
 
 The copy commands were executed using [mtran.sh](https://github.com/limelime/mtran/blob/master/mtran.sh) script.
 
-* cp: Copy using the plain `cp` command.
-* tar: Copy using tar piping, `tar|tar`.
-* tarbuffer: Use `buffer` to handle the buffering between the tar piping to do the copy, `tar|buffer|tar`.
-* tarpvbuffer: Use `pv` to handle the buffering between the tar piping to do the copy, `tar|pv|tar`.
-* rsync: Copy using the plain `rsync` command.
+* **cp**: copy using the plain `cp` command.
+* **tar**: copy using tar piping, `tar|tar`.
+* **tarbuffer**: use `buffer` to handle the buffering between the tar piping to do the copy, `tar|buffer|tar`.
+* **tarpvbuffer**: use `pv` to handle the buffering between the tar piping to do the copy, `tar|pv|tar`.
+* **rsync**: copy using the plain `rsync` command.
 
 # Results
 ![alt text](https://raw.githubusercontent.com/limelime/mtran/master/benchmark/benchmark-results.png "Copy commands performance results")
