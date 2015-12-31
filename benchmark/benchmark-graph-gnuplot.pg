@@ -1,8 +1,8 @@
 #!/usr/bin/gnuplot
 reset
 
-set terminal svg size 1024,768
-set output "benchmark-results.svg"
+set terminal png size 1024,768
+set output "benchmark-results.png"
 
 set datafile separator ";"
 
