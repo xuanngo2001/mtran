@@ -10,7 +10,8 @@ LOGFILE_DIR=./tmp-working
 #./benchmark-mtran.sh /media/master/mywiki_deprecated/ /media/sf_shared/test-data/ "Same disk, diff partition"
 
 # 803M
-./benchmark-mtran.sh /media/master/github/opwr /media/sf_shared/test-data/ "Same disk, diff partition"
+#./benchmark-mtran.sh /media/master/github/opwr /media/sf_shared/test-data/ "Same disk, diff partition"
+./benchmark-mtran.sh /media/master/github/opwr /media/imdb/ "Same disk, diff partition"
 
 ./benchmark-graph.sh
 ./benchmark-dataset-group.sh  "${LOGFILE_DIR}"
