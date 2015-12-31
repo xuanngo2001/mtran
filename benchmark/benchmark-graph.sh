@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-# Description: Graph execution time different commands of mtran.
+# Description: Graph execution time of different commands using mtran.
 
 RESULTS_LOG=$1
 RESULTS_LOG=benchmark-results.log
