@@ -17,7 +17,7 @@ mkdir -p "${WORK_DIR}"
 WORK_DIR=$(readlink -ev "${WORK_DIR}")
 
 
-
+# Construct plot command.
 PLOT_CMD="plot"
 COPY_CMDS=( cp tar tarbuffer tarpvbuffer rsync )
 for COPY_CMD in "${COPY_CMDS[@]}"
@@ -28,9 +28,9 @@ do
     COPY_CMD_LOG=$(readlink -ev "${COPY_CMD_LOG}")
     
   # Build plot commands. 
-  #PLOT_CMD="${PLOT_CMD} \"${COPY_CMD_LOG}\" using 1:5 title \"${COPY_CMD}\","  # Time based xtic.
-  PLOT_CMD="${PLOT_CMD} \"${COPY_CMD_LOG}\" using 0:5:xtic(3) title \"${COPY_CMD}\","
-  
+  #PLOT_CMD="${PLOT_CMD} \"${COPY_CMD_LOG}\" using 1:5 title \"${COPY_CMD}\","          # Time based xtic.
+  #PLOT_CMD="${PLOT_CMD} \"${COPY_CMD_LOG}\" using 0:5:xtic(3) title \"${COPY_CMD}\","  # Simple label of xtic.
+  PLOT_CMD="${PLOT_CMD} \"${COPY_CMD_LOG}\" using 0:5:xticlabels(stringcolumn(3) . \"\\n\" . stringcolumn(2)) title \"${COPY_CMD}\","
 done
 
 GNUPLOT_PG=benchmark-graph-gnuplot.pg
