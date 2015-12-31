@@ -11,6 +11,6 @@ BENCHMARK_RESULTS_MD=benchmark-results.md
 # Delete all lines after '# Commands code'
 sed -i '/# Commands code/,$d' "${BENCHMARK_RESULTS_MD}"
 echo '# Commands code' >> "${BENCHMARK_RESULTS_MD}"
-echo '<code>' >>"${BENCHMARK_RESULTS_MD}"
+echo '```bash' >>"${BENCHMARK_RESULTS_MD}"
   sed -n '/^ *case "${ACTION}" in/, /^ *esac$/p' "${MTRAN_SCRIPT}" >>"${BENCHMARK_RESULTS_MD}"
-echo '</code>' >>"${BENCHMARK_RESULTS_MD}"
+echo '```' >>"${BENCHMARK_RESULTS_MD}"
