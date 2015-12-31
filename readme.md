@@ -6,7 +6,7 @@
 
 
 # Goal
-* Copy huge directory and verifies files integrity. We are dealing with terabytes of data and hundred thousands of files.
+* Copy huge directory and verifies files integrity. It implies terabytes of data and hundred thousands of files.
 * Re-copy files if integrity test failed.
 * Resilient to interruptions. It should pick up where it left off.
 
@@ -70,4 +70,4 @@ http://unix.stackexchange.com/a/66660
 
 * http://blog.mudy.info/2010/07/linux-file-copy-benchmark-cp-vs-cpio-vs-tar-vs-rsync/
 * https://gist.github.com/zachharkey/7198898 -> http://snipplr.com/view/26670/
-* 
+
