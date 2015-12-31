@@ -17,10 +17,11 @@ set xtics rotate
 set xtics font ", 8"
 
 set title "Copy speed of each command - ".strftime("%Y-%m-%d", time(0))
-set key reverse Left outside
+set style data linespoints
 set grid
 
-set style data linespoints
+# Set the legend outside of the graph.
+set key reverse Left outside
 
 # Auto-generated command start here.
 set xtics ("" 1,"2015-12-21_14.30.05" 2,"2015-12-27_14.55.47" 3,"2015-12-30_15.03.32" 4,"2015-12-30_15.12.56" 5,"2015-12-30_17.28.50" 6,"2015-12-30_17.42.05" 7,"2015-12-31_09.18.06" 8,"2015-12-31_09.33.54" 9,"2015-12-31_09.46.11" 10,"2015-12-31_10.17.41" 11,"2015-12-31_10.26.19" 12)
