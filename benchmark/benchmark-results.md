@@ -1,5 +1,5 @@
 # Performance results of copy commands
-## cp, tar, rsync
+## cp vs tar vs rsync
 
 The copy commands were executed using [mtran.sh](https://github.com/limelime/mtran/blob/master/mtran.sh) script:
 
