@@ -69,3 +69,5 @@ http://unix.stackexchange.com/a/66660
 # To read
 
 * http://blog.mudy.info/2010/07/linux-file-copy-benchmark-cp-vs-cpio-vs-tar-vs-rsync/
+* https://gist.github.com/zachharkey/7198898 -> http://snipplr.com/view/26670/
+* 
