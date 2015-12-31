@@ -1,6 +1,6 @@
 # Performance results of copy commands
 
-The copy commands were executed using [mtran.sh](https://github.com/limelime/mtran/blob/master/mtran.sh) script.
+The copy commands were executed using [mtran.sh](https://github.com/limelime/mtran/blob/master/mtran.sh) script:
 
 * **cp**: copy using the plain `cp` command.
 * **tar**: copy using tar piping, `tar|tar`.
