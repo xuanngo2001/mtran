@@ -116,15 +116,15 @@
 2015-12-31_14.16.56; Same disk, diff partition; 500M, 12450 files, 1293 dirs; tarpvbuffer; 60
 2015-12-31_14.16.56; Same disk, diff partition; 500M, 12450 files, 1293 dirs; rsync; 120
 
-2015-12-31_14.30.59; Same disk, diff partition; 803M, 19354 files, 4224 dirs; cp; 232
-2015-12-31_14.30.59; Same disk, diff partition; 803M, 19354 files, 4224 dirs; tar; 162
-2015-12-31_14.30.59; Same disk, diff partition; 803M, 19354 files, 4224 dirs; tarbuffer; 161
-2015-12-31_14.30.59; Same disk, diff partition; 803M, 19354 files, 4224 dirs; tarpvbuffer; 155
-2015-12-31_14.30.59; Same disk, diff partition; 803M, 19354 files, 4224 dirs; rsync; 255
-
 2015-12-31_14.49.01; Same disk, diff partition; 803M, 19354 files, 4224 dirs; cp; 16
 2015-12-31_14.49.01; Same disk, diff partition; 803M, 19354 files, 4224 dirs; tar; 36
 2015-12-31_14.49.01; Same disk, diff partition; 803M, 19354 files, 4224 dirs; tarbuffer; 14
 2015-12-31_14.49.01; Same disk, diff partition; 803M, 19354 files, 4224 dirs; tarpvbuffer; 27
 2015-12-31_14.49.01; Same disk, diff partition; 803M, 19354 files, 4224 dirs; rsync; 58
+
+2015-12-31_14.52.37; Same disk, diff partition; 803M, 19354 files, 4224 dirs; cp; 45
+2015-12-31_14.52.37; Same disk, diff partition; 803M, 19354 files, 4224 dirs; tar; 8
+2015-12-31_14.52.37; Same disk, diff partition; 803M, 19354 files, 4224 dirs; tarbuffer; 12
+2015-12-31_14.52.37; Same disk, diff partition; 803M, 19354 files, 4224 dirs; tarpvbuffer; 20
+2015-12-31_14.52.37; Same disk, diff partition; 803M, 19354 files, 4224 dirs; rsync; 32
 
