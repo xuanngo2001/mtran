@@ -24,7 +24,7 @@ SRC_SIZE=$(du -chs "${SRC_DIR}" | tail -n 1 | cut -f 1)
 SRC_FILES=$(find "${SRC_DIR}" -type f | wc -l)
 SRC_DIRS=$(find "${SRC_DIR}" -type d | wc -l)
 SRC_STATS="${SRC_SIZE}, ${SRC_FILES} files, ${SRC_DIRS} dirs"
-echo "Test data: ${SRC_STATS}"
+echo "Test dataset: ${SRC_STATS}"
 
 DATE_STRING=$(date +"%Y-%m-%d_%0k.%M.%S")
 COPY_CMDS=( cp tar tarbuffer tarpvbuffer rsync )
@@ -37,7 +37,7 @@ do
   mkdir -p "${TEST_DIR}"
   
   # Time the execution.
-  echo "Run mtran ${COPY_CMD} ${SRC_DIR} ${TEST_DIR} ..."
+  echo "\tRunning mtran ${COPY_CMD} ${SRC_DIR} ${TEST_DIR} ..."
   RUNTIME="$(date +%s)"               # Start timer.
   mtran ${COPY_CMD} "${SRC_DIR}" "${TEST_DIR}"
   RUNTIME="$(($(date +%s)-RUNTIME))"  # End timer.
