@@ -10,7 +10,6 @@ set decimal locale
 set format y "%'.0f"
 
 # Labels
-set xlabel "Dataset"
 set ylabel "Runtime in seconds"
 
 # Set xtic properties.
