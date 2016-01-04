@@ -35,17 +35,17 @@ function F_MASS_TRANSFER()
     
     # tar: use tar to copy.
     tar)
-      tar -C "${SRC_BASE_DIR}" -cf - "${SRC_DIR_NAME}") | (tar -C "${DEST_DIR}" -xpSf -
+      tar -C "${SRC_BASE_DIR}" -cf - "${SRC_DIR_NAME}") | tar -C "${DEST_DIR}" -xpSf -
       ;;
 
     # tar & buffer: use tar and buffer to copy when 1 of the device is slower than the other 1.
     tarpvbuffer)
-      tar -C "${SRC_BASE_DIR}" -cf - "${SRC_DIR_NAME}") | pv -q -B 1024M | (tar -C "${DEST_DIR}" -xpSf -
+      tar -C "${SRC_BASE_DIR}" -cf - "${SRC_DIR_NAME}") | pv -q -B 1024M | tar -C "${DEST_DIR}" -xpSf -
       ;;
 
     # tar & buffer: use tar and buffer to copy when 1 of the device is slower than the other 1.
     tarbuffer)
-      tar -C "${SRC_BASE_DIR}" -cf - "${SRC_DIR_NAME}") | buffer -m 8M | (tar -C "${DEST_DIR}" -xpSf -
+      tar -C "${SRC_BASE_DIR}" -cf - "${SRC_DIR_NAME}") | buffer -m 8M | tar -C "${DEST_DIR}" -xpSf -
       ;;
 
     # rsync: Don't use sparse with rsync: http://stackoverflow.com/a/13266131
