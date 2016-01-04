@@ -1,0 +1,72 @@
+2015-12-31_16.39.47; Same HD: VM part. to VM part.; 803M, 19354 files, 4224 dirs; cp; 65
+2015-12-31_16.39.47; Same HD: VM part. to VM part.; 803M, 19354 files, 4224 dirs; tar; 22
+2015-12-31_16.39.47; Same HD: VM part. to VM part.; 803M, 19354 files, 4224 dirs; tarbuffer; 22
+2015-12-31_16.39.47; Same HD: VM part. to VM part.; 803M, 19354 files, 4224 dirs; tarpvbuffer; 17
+2015-12-31_16.39.47; Same HD: VM part. to VM part.; 803M, 19354 files, 4224 dirs; rsync; 46
+
+2015-12-31_16.42.44; Same HD: VM HD to shared dir; 257M, 4144 files, 993 dirs; cp; 66
+2015-12-31_16.42.44; Same HD: VM HD to shared dir; 257M, 4144 files, 993 dirs; tar; 47
+2015-12-31_16.42.44; Same HD: VM HD to shared dir; 257M, 4144 files, 993 dirs; tarbuffer; 38
+2015-12-31_16.42.44; Same HD: VM HD to shared dir; 257M, 4144 files, 993 dirs; tarpvbuffer; 34
+2015-12-31_16.42.44; Same HD: VM HD to shared dir; 257M, 4144 files, 993 dirs; rsync; 56
+
+2015-12-31_16.46.59; Same HD: VM HD to shared dir; 500M, 12450 files, 1293 dirs; cp; 130
+2015-12-31_16.46.59; Same HD: VM HD to shared dir; 500M, 12450 files, 1293 dirs; tar; 81
+2015-12-31_16.46.59; Same HD: VM HD to shared dir; 500M, 12450 files, 1293 dirs; tarbuffer; 80
+2015-12-31_16.46.59; Same HD: VM HD to shared dir; 500M, 12450 files, 1293 dirs; tarpvbuffer; 71
+2015-12-31_16.46.59; Same HD: VM HD to shared dir; 500M, 12450 files, 1293 dirs; rsync; 153
+
+2015-12-31_16.56.07; Same HD: VM part. to VM part.; 708M, 1252 files, 314 dirs; cp; 12
+2015-12-31_16.56.07; Same HD: VM part. to VM part.; 708M, 1252 files, 314 dirs; tar; 14
+2015-12-31_16.56.07; Same HD: VM part. to VM part.; 708M, 1252 files, 314 dirs; tarbuffer; 10
+2015-12-31_16.56.07; Same HD: VM part. to VM part.; 708M, 1252 files, 314 dirs; tarpvbuffer; 6
+2015-12-31_16.56.07; Same HD: VM part. to VM part.; 708M, 1252 files, 314 dirs; rsync; 8
+
+2015-12-31_16.56.58; Same HD: VM part. to VM part.; 708M, 1252 files, 314 dirs; cp; 3
+2015-12-31_16.56.58; Same HD: VM part. to VM part.; 708M, 1252 files, 314 dirs; tar; 2
+2015-12-31_16.56.58; Same HD: VM part. to VM part.; 708M, 1252 files, 314 dirs; tarbuffer; 4
+2015-12-31_16.56.58; Same HD: VM part. to VM part.; 708M, 1252 files, 314 dirs; tarpvbuffer; 4
+2015-12-31_16.56.58; Same HD: VM part. to VM part.; 708M, 1252 files, 314 dirs; rsync; 7
+
+2015-12-31_16.57.21; Same HD: VM HD to shared dir; 257M, 4144 files, 993 dirs; cp; 55
+2015-12-31_16.57.21; Same HD: VM HD to shared dir; 257M, 4144 files, 993 dirs; tar; 37
+2015-12-31_16.57.21; Same HD: VM HD to shared dir; 257M, 4144 files, 993 dirs; tarbuffer; 38
+2015-12-31_16.57.21; Same HD: VM HD to shared dir; 257M, 4144 files, 993 dirs; tarpvbuffer; 38
+2015-12-31_16.57.21; Same HD: VM HD to shared dir; 257M, 4144 files, 993 dirs; rsync; 58
+
+2015-12-31_17.01.24; Same HD: VM part. to VM part.; 803M, 19354 files, 4224 dirs; cp; 61
+2015-12-31_17.01.24; Same HD: VM part. to VM part.; 803M, 19354 files, 4224 dirs; tar; 19
+2015-12-31_17.01.24; Same HD: VM part. to VM part.; 803M, 19354 files, 4224 dirs; tarbuffer; 20
+2015-12-31_17.01.24; Same HD: VM part. to VM part.; 803M, 19354 files, 4224 dirs; tarpvbuffer; 17
+2015-12-31_17.01.24; Same HD: VM part. to VM part.; 803M, 19354 files, 4224 dirs; rsync; 38
+
+2015-12-31_17.04.05; Same HD: VM HD to shared dir; 500M, 12450 files, 1293 dirs; cp; 131
+2015-12-31_17.04.05; Same HD: VM HD to shared dir; 500M, 12450 files, 1293 dirs; tar; 76
+2015-12-31_17.04.05; Same HD: VM HD to shared dir; 500M, 12450 files, 1293 dirs; tarbuffer; 89
+2015-12-31_17.04.05; Same HD: VM HD to shared dir; 500M, 12450 files, 1293 dirs; tarpvbuffer; 93
+2015-12-31_17.04.05; Same HD: VM HD to shared dir; 500M, 12450 files, 1293 dirs; rsync; 139
+
+2016-01-04_10.38.31; Same HD: VM HD to shared/; 500M, 12450 files, 1293 dirs; cp; 126
+2016-01-04_10.38.31; Same HD: VM HD to shared/; 500M, 12450 files, 1293 dirs; tar; 72
+2016-01-04_10.38.31; Same HD: VM HD to shared/; 500M, 12450 files, 1293 dirs; tarbuffer; 71
+2016-01-04_10.38.31; Same HD: VM HD to shared/; 500M, 12450 files, 1293 dirs; tarpvbuffer; 72
+2016-01-04_10.38.31; Same HD: VM HD to shared/; 500M, 12450 files, 1293 dirs; rsync; 142
+
+2016-01-04_10.48.13; Same HD: VM HD to shared/(R); 494M, 12450 files, 1293 dirs; cp; 45
+2016-01-04_10.48.13; Same HD: VM HD to shared/(R); 494M, 12450 files, 1293 dirs; tar; 38
+2016-01-04_10.48.13; Same HD: VM HD to shared/(R); 494M, 12450 files, 1293 dirs; tarbuffer; 22
+2016-01-04_10.48.13; Same HD: VM HD to shared/(R); 494M, 12450 files, 1293 dirs; tarpvbuffer; 13
+2016-01-04_10.48.13; Same HD: VM HD to shared/(R); 494M, 12450 files, 1293 dirs; rsync; 31
+
+2016-01-04_10.50.50; Same HD: VM part. to VM part.; 803M, 19354 files, 4224 dirs; cp; 62
+2016-01-04_10.50.50; Same HD: VM part. to VM part.; 803M, 19354 files, 4224 dirs; tar; 14
+2016-01-04_10.50.50; Same HD: VM part. to VM part.; 803M, 19354 files, 4224 dirs; tarbuffer; 8
+2016-01-04_10.50.50; Same HD: VM part. to VM part.; 803M, 19354 files, 4224 dirs; tarpvbuffer; 8
+2016-01-04_10.50.50; Same HD: VM part. to VM part.; 803M, 19354 files, 4224 dirs; rsync; 10
+
+2016-01-04_10.52.41; Same HD: VM part. to VM part.(R); 803M, 19354 files, 4224 dirs; cp; 47
+2016-01-04_10.52.41; Same HD: VM part. to VM part.(R); 803M, 19354 files, 4224 dirs; tar; 29
+2016-01-04_10.52.41; Same HD: VM part. to VM part.(R); 803M, 19354 files, 4224 dirs; tarbuffer; 15
+2016-01-04_10.52.41; Same HD: VM part. to VM part.(R); 803M, 19354 files, 4224 dirs; tarpvbuffer; 10
+2016-01-04_10.52.41; Same HD: VM part. to VM part.(R); 803M, 19354 files, 4224 dirs; rsync; 32
+
