@@ -46,7 +46,7 @@ do
   echo "${DATE_STRING}; ${TEST_CASE_DESC}; ${SRC_STATS}; ${COPY_CMD}; ${RUNTIME}" >> "${RESULTS_LOG}"
   
   # Cleanup
-  rm -rf "${TEST_DIR}"
+  echo "      ${TEST_DIR} created."
 done
 
 # Add newline to separte between dataset.
