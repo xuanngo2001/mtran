@@ -16,8 +16,9 @@ if [ -z "${TEST_CASE_DESC}" ]; then echo "Error: Please provide test case descri
 SRC_DIR=$(readlink -ev "${SRC_DIR}")
 DEST_DIR=$(readlink -ev "${DEST_DIR}")
 
-# Stop if source and destination directory are the same.
-if [ "${SRC_DIR}" = "${DEST_DIR}" ]; then echo "Error: Source and destination directory are the same. Aborted!"; exit 1; fi;
+# Stop if trying to copy to itself.
+SRC_BASE_DIR=$(dirname "${SRC_DIR}")
+if [ "${SRC_BASE_DIR}" = "${DEST_DIR}" ]; then echo "Error: Trying to copy to itself. Aborted!"; exit 1; fi;
 
 # FROM -> TO
   ./benchmark-mtran.sh "${SRC_DIR}"  "${DEST_DIR}" "${TEST_CASE_DESC}"
