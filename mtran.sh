@@ -13,7 +13,15 @@ CMD_EXAMPLES=$(printf " %s\n %s\n %s\n %s\n %s\n %s\n %s\n" \
                       " e.g. ${SCRIPT_NAME} rsync       SOURCE_DIR/ DEST_DIR/"\
                       " e.g. ${SCRIPT_NAME} diff        SOURCE_DIR/ DEST_DIR/"\
               )
-                  
+
+# Force users to input only 3 parameters. Handle case where users input: mtran.sh cp * *.
+if [ "$#" -ne 3 ]; then
+  echo "${SCRIPT_NAME}: Error: Only 3 parameters are allowed. Aborted!"
+  echo "${SCRIPT_NAME}: Error: Current supply parameters are: $@"
+	echo "${CMD_EXAMPLES}"
+	exit 1    
+fi
+
 function F_MASS_TRANSFER()
 {
   local ACTION=$1
