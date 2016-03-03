@@ -67,6 +67,7 @@ function F_MASS_TRANSFER()
       rsync -a -W "${SRC_DIR}" "${DEST_DIR}"
       ;;
     
+    # For testing only. It bit comparison. It will take a lot of time.
     diff)
       diff -r "${SRC_DIR}" "${DEST_DIR}/${SRC_DIR_NAME}"
       ;;
