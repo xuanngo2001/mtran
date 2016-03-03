@@ -2,7 +2,14 @@
 
 # Usage
     
-    ./mtran copy SRC_DIR DEST_DIR
+    mtran.sh <ACTION>    <SOURCE_DIR> <DEST_DIR>
+    mtran.sh cp          SOURCE_DIR/ DEST_DIR/
+    mtran.sh tar         SOURCE_DIR/ DEST_DIR/
+    mtran.sh tarbuffer   SOURCE_DIR/ DEST_DIR/
+    mtran.sh tarpvbuffer SOURCE_DIR/ DEST_DIR/
+    mtran.sh rsync       SOURCE_DIR/ DEST_DIR/
+    mtran.sh diff        SOURCE_DIR/ DEST_DIR/
+
 
 
 # Goal
@@ -15,8 +22,13 @@
 * Copy from one device to another device of equal speed: internal hard drive to internal hard drive.
 * Copy from fast device to slow device: internal hard drive to external usb hard drive.
 * Copy from slow device to faster device: external usb hard drive to internal hard drive.
- 
 
+    # Should not copy.
+    ./mtran.sh cp test/ ./test/
+    
+    # Should not copy even if * expands to 2 parameters.
+    ./mtran.sh cp * *
+    
 # Tools looked
 * `rsync --checksum` only uses hashes to see if a file needs to be updated. It doesn't perform a hash comparison afterward. It is not resilient to interruptions.
 * `quickhash`
