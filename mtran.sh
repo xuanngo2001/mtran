@@ -2,7 +2,18 @@
 set -e
 # Description: Mass copy and verify files integrity.
 #   Copy SOURCE_DIR to DESTINATION_DIR
+SCRIPT_NAME=$(basename "$0")
 
+CMD_EXAMPLES=$(printf " %s\n %s\n %s\n %s\n %s\n %s\n %s\n" \
+                      " e.g. ${SCRIPT_NAME} <ACTION>    <SOURCE_DIR> <DEST_DIR>"\
+                      " e.g. ${SCRIPT_NAME} cp          SOURCE_DIR/ DEST_DIR/"\
+                      " e.g. ${SCRIPT_NAME} tar         SOURCE_DIR/ DEST_DIR/"\
+                      " e.g. ${SCRIPT_NAME} tarbuffer   SOURCE_DIR/ DEST_DIR/"\
+                      " e.g. ${SCRIPT_NAME} tarpvbuffer SOURCE_DIR/ DEST_DIR/"\
+                      " e.g. ${SCRIPT_NAME} rsync       SOURCE_DIR/ DEST_DIR/"\
+                      " e.g. ${SCRIPT_NAME} diff        SOURCE_DIR/ DEST_DIR/"\
+              )
+                  
 function F_MASS_TRANSFER()
 {
   local ACTION=$1
@@ -10,9 +21,9 @@ function F_MASS_TRANSFER()
   local DEST_DIR=$3
   
   # Error handling.
-  if [ -z "${ACTION}" ]; then echo "Error: Action can't be empty. Aborted!"; exit 1; fi;
-  if [ ! -d "${SRC_DIR}" ]; then echo "Error: Source directory: ${SRC_DIR}: no such directory. Aborted!"; exit 1; fi;
-  if [ ! -d "${DEST_DIR}" ]; then echo "Error: Destination directory: ${DEST_DIR}: no such directory. Aborted!"; exit 1; fi;
+  if [ -z "${ACTION}" ]; then echo "${SCRIPT_NAME}: Error: Action can't be empty. Aborted!"; echo "${CMD_EXAMPLES}"; exit 1; fi;
+  if [ ! -d "${SRC_DIR}" ]; then echo "${SCRIPT_NAME}: Error: Source directory: ${SRC_DIR}: no such directory. Aborted!"; echo "${CMD_EXAMPLES}"; exit 1; fi;
+  if [ ! -d "${DEST_DIR}" ]; then echo "${SCRIPT_NAME}: Error: Destination directory: ${DEST_DIR}: no such directory. Aborted!"; echo "${CMD_EXAMPLES}"; exit 1; fi;
   
   
   SRC_DIR=$(readlink -ev "${SRC_DIR}")
@@ -23,7 +34,10 @@ function F_MASS_TRANSFER()
   SRC_DIR_NAME=$(basename "${SRC_DIR}")
 
   # Stop if trying to copy to itself.
-  if [ "${SRC_BASE_DIR}" = "${DEST_DIR}" ]; then echo "Error: Trying to copy to itself. Aborted!"; exit 1; fi;
+  if [ "${SRC_BASE_DIR}" = "${DEST_DIR}" ]; then echo "${SCRIPT_NAME}: Error: Trying to copy to itself. Aborted!"; echo "${CMD_EXAMPLES}"; exit 1; fi;
+
+#echo "${SRC_BASE_DIR}"
+#echo "${DEST_DIR}"
 
   ACTION=$(echo "${ACTION}" | tr '[:upper:]' '[:lower:]')  # Lowercase to avoid case typo.
   case "${ACTION}" in
@@ -58,7 +72,8 @@ function F_MASS_TRANSFER()
       ;;
             
     *)
-      echo "ERROR: Unknown action=>${ACTION}"
+      echo "${CMD_EXAMPLES}"
+      echo "${SCRIPT_NAME}: Error: Unknown action=>${ACTION}"
       exit 1
       ;;
   esac
