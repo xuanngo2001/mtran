@@ -14,9 +14,9 @@ CMD_EXAMPLES=$(printf " %s\n %s\n %s\n %s\n %s\n %s\n %s\n" \
                       " e.g. ${SCRIPT_NAME} diff        SOURCE_DIR/ DEST_DIR/"\
               )
 
-# Force users to input only 3 parameters. Handle case where users input: mtran.sh cp * *.
+# Force users to input 3 parameters. Handle case where users input: mtran.sh cp * *.
 if [ "$#" -ne 3 ]; then
-  echo "${SCRIPT_NAME}: Error: Only 3 parameters are allowed. Aborted!"
+  echo "${SCRIPT_NAME}: Error: 3 input parameters are required. Aborted!"
   echo "  Current available parameters are: $@"
 	echo "${CMD_EXAMPLES}"
 	exit 1    

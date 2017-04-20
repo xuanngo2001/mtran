@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-# Description: Time different commands of mtran in both direction: from to and to from directories.
+# Description: Time different commands of mtran in both direction: from-to and to-from directories.
 #   -Should I reboot for every run?
 # Real, User and Sys process time statistics: http://stackoverflow.com/a/556411
 
