@@ -17,7 +17,7 @@ CMD_EXAMPLES=$(printf " %s\n %s\n %s\n %s\n %s\n %s\n %s\n" \
 # Force users to input only 3 parameters. Handle case where users input: mtran.sh cp * *.
 if [ "$#" -ne 3 ]; then
   echo "${SCRIPT_NAME}: Error: Only 3 parameters are allowed. Aborted!"
-  echo "  Current supplied parameters are: $@"
+  echo "  Current available parameters are: $@"
 	echo "${CMD_EXAMPLES}"
 	exit 1    
 fi
