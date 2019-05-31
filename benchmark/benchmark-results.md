@@ -1,7 +1,7 @@
 # Performance results of copy commands
 ## cp vs tar vs rsync
 
-The copy commands were executed using [mtran.sh](https://github.com/limelime/mtran/blob/master/mtran.sh) script:
+The copy methods were executed using [mtran.sh](https://github.com/limelime/mtran/blob/master/mtran.sh) script:
 
 * **cp**: copy using the plain `cp` command.
 * **tar**: copy using `tar` and pipe, `tar|tar`.
