@@ -1,7 +1,7 @@
 # Performance results of copy commands
 ## cp vs tar vs rsync
 
-The copy methods were executed using [mtran.sh](https://github.com/limelime/mtran/blob/master/mtran.sh) script:
+The copy methods were executed using [mtran.sh](https://github.com/xuanngo2001/mtran/blob/master/mtran.sh) script:
 
 * **cp**: copy using the plain `cp` command.
 * **tar**: copy using `tar` and pipe, `tar|tar`.
@@ -12,7 +12,7 @@ The copy methods were executed using [mtran.sh](https://github.com/limelime/mtra
 For details, see [Commands code section](#commands-code).
 
 # Results
-![alt text](https://raw.githubusercontent.com/limelime/mtran/master/benchmark/benchmark-results.png "Copy commands performance results")
+![alt text](https://raw.githubusercontent.com/xuanngo2001/mtran/master/benchmark/benchmark-results.png "Copy commands performance results")
 
 # Conclusion
 * `rsync` is always slower than `cp` and `tar`. It is safe to say that `rsync` is almost 2 times slower than the other commands.
