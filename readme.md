@@ -23,12 +23,14 @@
 * Copy from fast device to slow device: internal hard drive to external usb hard drive.
 * Copy from slow device to faster device: external usb hard drive to internal hard drive.
 
+```
     # Should not copy.
     ./mtran.sh cp test/ ./test/
     
     # Should not copy even if * expands to 2 parameters.
     ./mtran.sh cp * *
-    
+```
+
 # Tools looked
 * `rsync --checksum` only uses hashes to see if a file needs to be updated. It doesn't perform a hash comparison afterward. It is not resilient to interruptions.
 * `quickhash`
